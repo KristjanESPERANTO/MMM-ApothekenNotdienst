@@ -14,7 +14,7 @@ Why should access to information such as emergency pharmacy services be freely a
 
 ## Installation
 
-Just clone the module into your modules directory of your MagicMirror² and execute `npm ci` in the module’s directory:
+Just clone the module into your modules directory of your MagicMirror²:
 
 ```bash
 cd ~/MagicMirror/modules
@@ -49,7 +49,7 @@ To use this module, add it to the `config.js` file. Here is a minimal example:
 
 ## Update
 
-Go to the module’s directory and pull the latest version from GitHub and install:
+Go to the module’s directory and pull the latest version from GitHub:
 
 ```bash
 cd ~/MagicMirror/modules/MMM-ApothekenNotdienst
