@@ -1,0 +1,36 @@
+{
+  "name": "mmm-apothekennotdienst",
+  "version": "1.0.0",
+  "description": "A MagicMirror² module to display pharmacies that are on emergency duty in Germany.",
+  "main": "MMM-ApothekenNotdienst.js",
+  "scripts": {
+    "lint": "eslint && stylelint **/*.css  && markdownlint . --ignore node_modules && prettier --check .",
+    "lint:fix": "eslint --fix && stylelint **/*.css --fix && markdownlint . --ignore node_modules --fix && prettier --write .",
+    "test": "npm run lint"
+  },
+  "keywords": [
+    "MagicMirror",
+    "Apotheke",
+    "Notdienst"
+  ],
+  "author": "KristjanESPERANTO",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@stylistic/eslint-plugin": "^3.0.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.14.0",
+    "lint-staged": "^15.4.3",
+    "markdownlint-cli": "^0.44.0",
+    "prettier": "^3.4.2",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-prettier": "^5.0.3"
+  },
+  "lint-staged": {
+    "*.css": "stylelint --fix",
+    "*.js": "eslint --cache --fix",
+    "*.md": "markdownlint --ignore node_modules --fix"
+  }
+}
