@@ -1,12 +1,18 @@
 # MMM-ApothekenNotdienst
 
-**MMM-ApothekenNotdienst** is a module for the [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) project.
-
-Since the data is only available in German, the module is also only available in German.
+**MMM-ApothekenNotdienst** is a module for the [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) project. Since the data is only relevant for Germany, it is only available in German.
 
 It shows the next pharmacies on duty in Germany. The data is provided by the website [www.aponet.de](https://www.aponet.de/apotheke/notdienstsuche/).
 
-Why should access to information such as emergency pharmacy services be freely available? This ensures that people can quickly find life-saving medicines in emergencies, improves public health, supports innovation in healthcare applications and strengthens transparency and trust in the healthcare system.
+Simce there is no official API, the data is scraped from the website. That means that the module may stop working if the website changes anything.
+
+There is also no guarantee that the data is correct. Please always double-check the information before you go to a pharmacy.
+
+## Open Data
+
+Emergency pharmacy services are an important part of the healthcare system. So why is this information not available as open data?
+
+This would ensure that people can quickly find life-saving medicines in emergencies, improves public health, supports innovation in healthcare applications and strengthens transparency and trust in the healthcare system.
 
 ## Screenshot
 
