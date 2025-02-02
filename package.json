@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A MagicMirror² module to display pharmacies that are on emergency duty in Germany.",
   "main": "MMM-ApothekenNotdienst.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst"
+  },
   "scripts": {
     "lint": "eslint && stylelint **/*.css  && markdownlint . --ignore node_modules && prettier --check .",
     "lint:fix": "eslint --fix && stylelint **/*.css --fix && markdownlint . --ignore node_modules --fix && prettier --write .",
