@@ -32,14 +32,15 @@ git clone https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/
 To use this module, add it to the `config.js` file. Here is a minimal example:
 
 ```javascript
-{
-  module: "MMM-ApothekenNotdienst",
-  position: "top_left",
-  config: {
-    lat: 52.4974,
-    lon: 13.4596,
-  }
-},
+    {
+      module: "MMM-ApothekenNotdienst",
+      header: "Apotheken-Notdienste",
+      position: "top_left",
+      config: {
+        lat: 52.4974,
+        lon: 13.4596,
+      }
+    },
 ```
 
 ### Configuration options
