@@ -45,13 +45,13 @@ To use this module, add it to the `config.js` file. Here is a minimal example:
 
 ### Configuration options
 
-| Option           | Description                                                                                             | Type    | Default               |
-| ---------------- | ------------------------------------------------------------------------------------------------------- | ------- | --------------------- |
-| `lat`            | **Required**<br>Latitude of your location                                                               | Float   | `52.4974`             |
-| `lon`            | **Required**<br>Longitude of your location                                                              | Float   | `13.4596`             |
-| `day`          | **Optional**<br>Show duties for today or tomorrow. <br> **Possible values:** `"today"` and `"tomorrow"` | String  | `"today"`             |
-| `radius`         | **Optional**<br>Radius in km around your location                                                       | Integer | `5`                   |
-| `maxEntries`     | **Optional**<br>Maximum number of entries to show                                                       | Integer | `3`                   |
+| Option           | Description                                                                                             | Type    | Default                       |
+| ---------------- | ------------------------------------------------------------------------------------------------------- | ------- | ----------------------------- |
+| `lat`            | **Required**<br>Latitude of your location                                                               | Float   | `52.4974`                     |
+| `lon`            | **Required**<br>Longitude of your location                                                              | Float   | `13.4596`                     |
+| `day`            | **Optional**<br>Show duties for today or tomorrow. <br> **Possible values:** `"today"` and `"tomorrow"` | String  | `"today"`                     |
+| `radius`         | **Optional**<br>Radius in km around your location                                                       | Integer | `5`                           |
+| `maxEntries`     | **Optional**<br>Maximum number of entries to show                                                       | Integer | `3`                           |
 | `updateInterval` | **Optional**<br>Update interval in milliseconds                                                         | Integer | `30 * 60 * 1000` (30 minutes) |
 
 ## Update
