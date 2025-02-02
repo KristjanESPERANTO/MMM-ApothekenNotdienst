@@ -4,7 +4,7 @@
 
 It shows the next pharmacies on duty in Germany. The data is provided by the website [www.aponet.de](https://www.aponet.de/apotheke/notdienstsuche/).
 
-Simce there is no official API, the data is scraped from the website. That means that the module may stop working if the website changes anything.
+Since there is no official API, the data is scraped from the website. That means that the module may stop working if the website changes anything.
 
 There is also no guarantee that the data is correct. Please always double-check the information before you go to a pharmacy.
 
@@ -83,6 +83,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 - `npm run lint` - Run linting and formatter checks.
 - `npm run lint:fix` - Fix linting and formatter issues.
 - `npm run test` - Run linting and formatter checks + run spelling check.
+- `npm run test:spelling` - Run spelling check.
 
 ## License
 

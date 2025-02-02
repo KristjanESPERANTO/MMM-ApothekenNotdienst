@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "aponet",
+    "aponetpharmacy",
+    "Apotheke",
+    "Apotheken",
+    "apothekennotdienst",
+    "Datenquelle",
+    "distanz",
+    "enddatum",
+    "endzeit",
+    "Entfernung",
+    "Kristjan",
+    "Notdienst",
+    "Notdienste",
+    "plzort",
+    "startdatum",
+    "startzeit",
+    "strasse",
+    "telefon",
+    "xsmall"
+  ],
+  "ignorePaths": ["node_modules/**", "translations/**"],
+  "dictionaries": ["node"]
+}
