@@ -1,13 +1,16 @@
-import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginImport from "eslint-plugin-import-x";
 import eslintPluginJs from "@eslint/js";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import globals from "globals";
 
 const config = [
+  eslintPluginImport.flatConfigs.recommended,
   eslintPluginJs.configs.all,
+  eslintPluginStylistic.configs.all,
   {
     "files": ["**/*.js"],
     "languageOptions": {
+      "ecmaVersion": "latest",
       "globals": {
         ...globals.browser,
         ...globals.node,
@@ -15,13 +18,7 @@ const config = [
         "Module": "readonly"
       }
     },
-    "plugins": {
-      ...eslintPluginStylistic.configs["all-flat"].plugins,
-      "import": eslintPluginImport
-    },
     "rules": {
-      ...eslintPluginImport.configs.recommended.rules,
-      ...eslintPluginStylistic.configs["all-flat"].rules,
       "@stylistic/array-element-newline": ["error", "consistent"],
       "@stylistic/dot-location": ["error", "property"],
       "@stylistic/function-call-argument-newline": ["error", "consistent"],
@@ -53,11 +50,7 @@ const config = [
       },
       "sourceType": "module"
     },
-    "plugins": {
-      ...eslintPluginStylistic.configs["all-flat"].plugins
-    },
     "rules": {
-      ...eslintPluginStylistic.configs["all-flat"].rules,
       "@stylistic/array-element-newline": "off",
       "@stylistic/indent": ["error", 2],
       "@stylistic/padded-blocks": ["error", "never"],
