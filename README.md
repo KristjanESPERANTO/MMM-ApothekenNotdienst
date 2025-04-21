@@ -80,6 +80,7 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 ### Developer commands
 
+- `npm install` - Install development dependencies.
 - `npm run lint` - Run linting and formatter checks.
 - `npm run lint:fix` - Fix linting and formatter issues.
 - `npm run test` - Run linting and formatter checks + run spelling check.
@@ -91,4 +92,4 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE.md) f
 
 ## Changelog
 
-All notable changes to this project will be documented in the [CHANGELOG.md](./CHANGELOG.md) file.
+All notable changes to this project will be documented in the [CHANGELOG.md](CHANGELOG.md) file.
