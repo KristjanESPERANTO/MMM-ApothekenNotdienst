@@ -1,66 +1,46 @@
-import eslintPluginJs from "@eslint/js";
-import eslintPluginStylistic from "@stylistic/eslint-plugin";
+import css from "@eslint/css";
+import {defineConfig} from "eslint/config";
 import globals from "globals";
-import {flatConfigs as importConfigs} from "eslint-plugin-import-x";
+import {flatConfigs as importX} from "eslint-plugin-import-x";
+import js from "@eslint/js";
+import json from "@eslint/json";
+import markdown from "@eslint/markdown";
+import stylistic from "@stylistic/eslint-plugin";
 
-const config = [
-  eslintPluginJs.configs.all,
-  eslintPluginStylistic.configs.all,
-  importConfigs.recommended,
+export default defineConfig([
+  {files: ["**/*.css"], plugins: {css}, language: "css/css", extends: ["css/recommended"]},
   {
-    "files": ["**/*.js"],
-    "languageOptions": {
-      "ecmaVersion": "latest",
-      "globals": {
+    files: ["**/*.{js,mjs}"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      globals: {
         ...globals.browser,
         ...globals.node,
-        "Log": "readonly",
-        "Module": "readonly"
+        Log: "readonly",
+        Module: "readonly"
       }
     },
-    "rules": {
+    plugins: {js, stylistic},
+    extends: [importX.recommended, "js/all", "stylistic/all"],
+    rules: {
       "@stylistic/array-element-newline": ["error", "consistent"],
       "@stylistic/dot-location": ["error", "property"],
       "@stylistic/function-call-argument-newline": ["error", "consistent"],
       "@stylistic/indent": ["error", 2],
-      "@stylistic/object-property-newline": "off",
+      "@stylistic/object-property-newline": ["error", {allowAllPropertiesOnSameLine: true}],
       "@stylistic/padded-blocks": ["error", "never"],
       "@stylistic/quote-props": ["error", "as-needed"],
       "capitalized-comments": "off",
       "consistent-this": "off",
-      "line-comment-position": "off",
-      "max-lines-per-function": ["error", 150],
+      "import-x/no-unresolved": ["error", {ignore: ["eslint/config"]}],
       "max-statements": ["error", 50],
-      "no-await-in-loop": "off",
       "no-inline-comments": "off",
       "no-magic-numbers": "off",
-      "no-param-reassign": "off",
-      "no-undef": "warn",
-      "one-var": "off",
+      "one-var": ["error", "never"],
       "sort-keys": "off",
-      "strict": "off"
+      strict: "off"
     }
   },
-  {
-    "files": ["**/*.mjs"],
-    "languageOptions": {
-      "ecmaVersion": "latest",
-      "globals": {
-        ...globals.node
-      },
-      "sourceType": "module"
-    },
-    "rules": {
-      "@stylistic/array-element-newline": "off",
-      "@stylistic/indent": ["error", 2],
-      "@stylistic/padded-blocks": ["error", "never"],
-      "func-style": "off",
-      "max-lines-per-function": ["error", 100],
-      "no-magic-numbers": "off",
-      "one-var": "off",
-      "prefer-destructuring": "off"
-    }
-  }
-];
-
-export default config;
+  {files: ["**/*.json"], ignores: ["package-lock.json"], plugins: {json}, language: "json/json", extends: ["json/recommended"]},
+  {files: ["**/*.md"], plugins: {markdown}, language: "markdown/gfm", extends: ["markdown/recommended"]}
+]);
