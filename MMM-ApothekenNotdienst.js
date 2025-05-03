@@ -37,10 +37,10 @@ Module.register("MMM-ApothekenNotdienst", {
   socketNotificationReceived (notification, payload) {
     if (notification === "APO_DATA_RECEIVED") {
       if (payload && payload.length > 0) {
-        payload = payload.slice(0, this.config.maxEntries);
+        const slicedPayload = payload.slice(0, this.config.maxEntries);
 
         this.dataDiv = document.createElement("div");
-        payload.forEach((apo) => {
+        slicedPayload.forEach((apo) => {
           const apoDiv = document.createElement("div");
           apoDiv.classList.add("apo-entry");
 
