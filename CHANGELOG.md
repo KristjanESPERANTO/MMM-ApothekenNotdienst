@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.5](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.4...v1.0.5) - 2025-05-03 - Maintenance release
+
+### Changed
+
+- chore: refactor ESLint config to use `defineConfig` and add plugins for json, css and markdown
+- chore: setup `husky` and `lint-staged`
+- chore: update devDependencies
+- chore: use `node --run` instead of `npm run` for CI and development command
+- docs: add npm install command to developer commands section
+- refactor: remove parameter reassignment
+
 ## [1.0.4](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.3...v1.0.4) - 2025-04-03 - Maintenance release
 
 ### Added
