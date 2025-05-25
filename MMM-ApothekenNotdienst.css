@@ -2,37 +2,37 @@
   font-size: var(--font-size-xsmall);
   margin: 0;
   padding: 0;
-}
 
-.apo-entry {
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-}
+  .apo-entry {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+  }
 
-.apo-footer {
-  font-size: var(--font-size-xsmall);
-  margin-top: 0.5em;
-  padding: 0.5em;
-}
+  .apo-footer {
+    font-size: var(--font-size-xsmall);
+    margin-top: 0.5em;
+    padding: 0.5em;
+  }
 
-.apo-name {
-  color: var(--color-text-bright);
-  font-size: var(--font-size-small);
-  font-weight: bold;
-}
+  .apo-name {
+    color: var(--color-text-bright);
+    font-size: var(--font-size-small);
+    font-weight: bold;
+  }
 
-.apo-distance::before {
-  content: "🚶 ";
-}
+  .apo-distance::before {
+    content: "🚶 ";
+  }
 
-.apo-time::before {
-  content: "🕒 ";
-}
+  .apo-time::before {
+    content: "🕒 ";
+  }
 
-.apo-address::before {
-  content: "🏠 ";
-}
+  .apo-address::before {
+    content: "🏠 ";
+  }
 
-.apo-phone::before {
-  content: "☎️ ";
+  .apo-phone::before {
+    content: "☎️ ";
+  }
 }
