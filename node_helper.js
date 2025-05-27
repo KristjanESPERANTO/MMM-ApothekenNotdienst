@@ -47,7 +47,7 @@ module.exports = NodeHelper.create({
       "tx_aponetpharmacy_search[search][radius]": config.radius,
       "tx_aponetpharmacy_search[search][lat]": config.lat,
       "tx_aponetpharmacy_search[search][lng]": config.lon,
-      "tx_aponetpharmacy_search[token]": "216823d96ea25c051509d935955c130fbc72680fc1d3040fe3f8ca0e25f9cd02",
+      "tx_aponetpharmacy_search[token]": "216823d96ea25c051509d935955c130fbc72680fc1d3040fe3e8ca0e25f9cd02",
       type: "1981"
     }).toString();
 
