@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.7](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.6...v1.0.7) - 2025-05-28
+
+### Changed
+
+- chore: update devDependencies
+
+### Fixed
+
+- fix: update token (we should implement a function to fetch the token automatically in the future)
+
 ## [1.0.6](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.5...v1.0.6) - 2025-05-25 - Maintenance release
 
 ### Changed
