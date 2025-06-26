@@ -38,13 +38,11 @@ export default defineConfig([
       "@stylistic/padded-blocks": ["error", "never"],
       "@stylistic/quote-props": ["error", "as-needed"],
       "capitalized-comments": "off",
-      "import-x/no-unresolved": ["error", {ignore: ["eslint/config"]}],
       "max-statements": ["error", 50],
       "no-inline-comments": "off",
       "no-magic-numbers": "off",
       "one-var": ["error", "never"],
-      "sort-keys": "off",
-      strict: "off"
+      "sort-keys": "off"
     }
   },
   {files: ["**/*.md"], plugins: {markdown}, language: "markdown/gfm", extends: ["markdown/recommended"]}
