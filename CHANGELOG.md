@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.8](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.7...v1.0.8) - 2025-06-26
+
+### Changed
+
+- chore: add missing type field in `package.json`
+- chore: disable new linter rule `css/no-invalid-properties`
+- chore: remove unused ESLint rules
+- chore: update devDependencies
+- refactor: simplify setInterval callback in `node_helper`
+
 ## [1.0.7](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.6...v1.0.7) - 2025-05-28
 
 ### Changed
