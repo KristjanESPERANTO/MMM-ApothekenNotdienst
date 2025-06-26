@@ -38,7 +38,6 @@ export default defineConfig([
       "@stylistic/padded-blocks": ["error", "never"],
       "@stylistic/quote-props": ["error", "as-needed"],
       "capitalized-comments": "off",
-      "consistent-this": "off",
       "import-x/no-unresolved": ["error", {ignore: ["eslint/config"]}],
       "max-statements": ["error", 50],
       "no-inline-comments": "off",

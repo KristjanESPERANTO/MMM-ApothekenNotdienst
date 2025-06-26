@@ -12,11 +12,8 @@ module.exports = NodeHelper.create({
       this.config = payload;
       Log.log("MMM-ApothekenNotdienst node_helper received a socket notification");
       this.getData(payload);
-      const self = this;
       setInterval(
-        () => {
-          self.getData(payload);
-        },
+        () => this.getData(payload),
         this.config.updateInterval
       );
     }
