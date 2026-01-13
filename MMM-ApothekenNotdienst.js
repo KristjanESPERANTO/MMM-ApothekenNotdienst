@@ -6,7 +6,8 @@ Module.register("MMM-ApothekenNotdienst", {
     lon: 13.4596,
     radius: 5, // in km
     maxEntries: 5,
-    updateInterval: 30 * 60 * 1000 // update every 30 minutes
+    updateInterval: 30 * 60 * 1000, // update every 30 minutes
+    apiToken: "216823d96ea25c051509d935955c130fbc72680fc1d3040fe3e8ca0e25f9cd02" // aponet.de API token
   },
 
   async start () {
