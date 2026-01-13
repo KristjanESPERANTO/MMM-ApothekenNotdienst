@@ -19,22 +19,13 @@ module.exports = NodeHelper.create({
     }
   },
 
-  async getData (config) {
-    const currentDate = new Date();
+  formatDate (date) {
+    return `${date.getDate().toString()
+      .padStart(2, "0")}.${(date.getMonth() + 1).toString().padStart(2, "0")}.${date.getFullYear()}`;
+  },
 
-    const today = `${currentDate.getDate().toString()
-      .padStart(2, "0")}.${(currentDate.getMonth() + 1).toString().padStart(2, "0")}.${currentDate.getFullYear()}`;
-
-    const tomorrowDate = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000);
-    const tomorrow = `${tomorrowDate.getDate().toString()
-      .padStart(2, "0")}.${(tomorrowDate.getMonth() + 1).toString().padStart(2, "0")}.${tomorrowDate.getFullYear()}`;
-
-    let day = tomorrow;
-
-    if (config.day === "today") {
-      day = today;
-    }
-    const url = new URL("https://www.aponet.de/apotheke/notdienstsuche");
+  buildApiUrl (config, day) {
+    const url = new URL("https://www.aponet.de/notdienstsuche");
     url.search = new URLSearchParams({
       "tx_aponetpharmacy_search[action]": "result",
       "tx_aponetpharmacy_search[controller]": "Search",
@@ -47,14 +38,39 @@ module.exports = NodeHelper.create({
       "tx_aponetpharmacy_search[token]": "216823d96ea25c051509d935955c130fbc72680fc1d3040fe3e8ca0e25f9cd02",
       type: "1981"
     }).toString();
+    return url;
+  },
+
+  async getData (config) {
+    const currentDate = new Date();
+    const today = this.formatDate(currentDate);
+    const tomorrowDate = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000);
+    const tomorrow = this.formatDate(tomorrowDate);
+    let day = tomorrow;
+    if (config.day === "today") {
+      day = today;
+    }
+    const url = this.buildApiUrl(config, day);
 
     Log.debug(`Fetching data from ${url}`);
     try {
       const response = await fetch(url);
 
+      if (!response.ok) {
+        Log.error(`HTTP error! status: ${response.status}`);
+        return;
+      }
+
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        const text = await response.text();
+        Log.error(`Expected JSON but received: ${contentType}`);
+        Log.error(`Response preview: ${text.substring(0, 200)}`);
+        return;
+      }
+
       const data = await response.json();
       const apotheken = data?.results?.apotheken?.apotheke || [];
-      // Log.debug(apotheken);
 
       this.sendSocketNotification("APO_DATA_RECEIVED", apotheken);
     } catch (error) {
