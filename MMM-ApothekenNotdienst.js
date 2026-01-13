@@ -17,17 +17,62 @@ Module.register("MMM-ApothekenNotdienst", {
       this.config.updateInterval = 20 * 60 * 1000;
     }
 
+    this.apotheken = [];
     await this.sendSocketNotification("GET_APO_DATA", this.config);
   },
 
   getDom () {
     const wrapper = document.createElement("div");
 
-    if (this.dataDiv) {
-      wrapper.appendChild(this.dataDiv);
+    if (this.apotheken.length === 0) {
+      return wrapper;
     }
 
+    const slicedData = this.apotheken.slice(0, this.config.maxEntries);
+    slicedData.forEach((apo) => {
+      const apoDiv = this.createApoEntry(apo);
+      wrapper.appendChild(apoDiv);
+    });
+
+    const footer = document.createElement("div");
+    footer.classList.add("apo-footer");
+    footer.innerHTML = "Datenquelle: <b>www.aponet.de</b>";
+    wrapper.appendChild(footer);
+
     return wrapper;
+  },
+
+  createApoEntry (apo) {
+    const apoDiv = document.createElement("div");
+    apoDiv.classList.add("apo-entry");
+
+    const apoNameDiv = document.createElement("div");
+    apoNameDiv.innerHTML = apo.name;
+    apoNameDiv.classList.add("apo-name");
+    apoDiv.appendChild(apoNameDiv);
+
+    const apoDistancesDiv = document.createElement("div");
+    const apoDistance = Math.round(apo.distanz * 10) / 10;
+    apoDistancesDiv.innerHTML = `Entfernung: <b>${apoDistance} km</b>`;
+    apoDistancesDiv.classList.add("apo-distance");
+    apoDiv.appendChild(apoDistancesDiv);
+
+    const apoTimeDiv = document.createElement("div");
+    apoTimeDiv.innerHTML = `Notdienst vom <b>${apo.startdatum}</b> um <b>${apo.startzeit} Uhr</b> bis <b>${apo.enddatum}</b> um <b>${apo.endzeit}</b> Uhr.`;
+    apoTimeDiv.classList.add("apo-time");
+    apoDiv.appendChild(apoTimeDiv);
+
+    const apoAddressDiv = document.createElement("div");
+    apoAddressDiv.innerHTML = `${apo.strasse}, ${apo.plz} ${apo.ort}`;
+    apoAddressDiv.classList.add("apo-address");
+    apoDiv.appendChild(apoAddressDiv);
+
+    const apoPhoneDiv = document.createElement("div");
+    apoPhoneDiv.innerHTML = apo.telefon;
+    apoPhoneDiv.classList.add("apo-phone");
+    apoDiv.appendChild(apoPhoneDiv);
+
+    return apoDiv;
   },
 
   getStyles () {
@@ -37,46 +82,7 @@ Module.register("MMM-ApothekenNotdienst", {
   socketNotificationReceived (notification, payload) {
     if (notification === "APO_DATA_RECEIVED") {
       if (payload && payload.length > 0) {
-        const slicedPayload = payload.slice(0, this.config.maxEntries);
-
-        this.dataDiv = document.createElement("div");
-        slicedPayload.forEach((apo) => {
-          const apoDiv = document.createElement("div");
-          apoDiv.classList.add("apo-entry");
-
-          const apoNameDiv = document.createElement("div");
-          apoNameDiv.innerHTML = apo.name;
-          apoNameDiv.classList.add("apo-name");
-          apoDiv.appendChild(apoNameDiv);
-
-          const apoDistancesDiv = document.createElement("div");
-          const apoDistance = Math.round(apo.distanz * 10) / 10;
-          apoDistancesDiv.innerHTML = `Entfernung: <b>${apoDistance} km</b>`;
-          apoDistancesDiv.classList.add("apo-distance");
-          apoDiv.appendChild(apoDistancesDiv);
-
-          const apoTimeDiv = document.createElement("div");
-          apoTimeDiv.innerHTML = `Notdienst vom <b>${apo.startdatum}</b> um <b>${apo.startzeit} Uhr</b> bis <b>${apo.enddatum}</b> um <b>${apo.endzeit}</b> Uhr.`;
-          apoTimeDiv.classList.add("apo-time");
-          apoDiv.appendChild(apoTimeDiv);
-
-          const apoAddressDiv = document.createElement("div");
-          apoAddressDiv.innerHTML = `${apo.strasse}, ${apo.plz} ${apo.ort}`;
-          apoAddressDiv.classList.add("apo-address");
-          apoDiv.appendChild(apoAddressDiv);
-
-          const apoPhoneDiv = document.createElement("div");
-          apoPhoneDiv.innerHTML = apo.telefon;
-          apoPhoneDiv.classList.add("apo-phone");
-          apoDiv.appendChild(apoPhoneDiv);
-
-          this.dataDiv.appendChild(apoDiv);
-        });
-        const footer = document.createElement("div");
-        footer.classList.add("apo-footer");
-        footer.innerHTML = "Datenquelle: <b>www.aponet.de</b>";
-        this.dataDiv.appendChild(footer);
-
+        this.apotheken = payload;
         this.updateDom();
       }
     }
