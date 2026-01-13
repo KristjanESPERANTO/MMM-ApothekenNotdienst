@@ -5,14 +5,21 @@ const NodeHelper = require("node_helper");
 module.exports = NodeHelper.create({
   start () {
     Log.log(`Starting module helper: ${this.name}`);
+    this.updateInterval = null;
   },
 
   socketNotificationReceived (notification, payload) {
     if (notification === "GET_APO_DATA") {
       this.config = payload;
       Log.log("MMM-ApothekenNotdienst node_helper received a socket notification");
+
+      // Clear existing interval to prevent memory leak
+      if (this.updateInterval) {
+        clearInterval(this.updateInterval);
+      }
+
       this.getData(payload);
-      setInterval(
+      this.updateInterval = setInterval(
         () => this.getData(payload),
         this.config.updateInterval
       );
