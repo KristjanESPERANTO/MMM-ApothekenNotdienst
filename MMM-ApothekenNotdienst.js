@@ -18,13 +18,29 @@ Module.register("MMM-ApothekenNotdienst", {
     }
 
     this.apotheken = [];
+    this.loaded = false;
+    this.error = null;
     await this.sendSocketNotification("GET_APO_DATA", this.config);
   },
 
   getDom () {
     const wrapper = document.createElement("div");
 
+    if (this.error) {
+      wrapper.innerHTML = "Fehler beim Laden der Daten.";
+      wrapper.classList.add("dimmed", "light", "small");
+      return wrapper;
+    }
+
+    if (!this.loaded) {
+      wrapper.innerHTML = "Lade Apotheken-Notdienste...";
+      wrapper.classList.add("dimmed", "light", "small");
+      return wrapper;
+    }
+
     if (this.apotheken.length === 0) {
+      wrapper.innerHTML = "Keine Apotheken-Notdienste gefunden.";
+      wrapper.classList.add("dimmed", "light", "small");
       return wrapper;
     }
 
@@ -81,10 +97,14 @@ Module.register("MMM-ApothekenNotdienst", {
 
   socketNotificationReceived (notification, payload) {
     if (notification === "APO_DATA_RECEIVED") {
-      if (payload && payload.length > 0) {
-        this.apotheken = payload;
-        this.updateDom();
-      }
+      this.loaded = true;
+      this.error = null;
+      this.apotheken = payload || [];
+      this.updateDom();
+    } else if (notification === "FETCH_ERROR") {
+      this.loaded = true;
+      this.error = payload || "Unbekannter Fehler";
+      this.updateDom();
     }
   }
 });

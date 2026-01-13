@@ -64,15 +64,19 @@ module.exports = NodeHelper.create({
       const response = await fetch(url);
 
       if (!response.ok) {
-        Log.error(`HTTP error! status: ${response.status}`);
+        const errorMsg = `HTTP error! status: ${response.status}`;
+        Log.error(errorMsg);
+        this.sendSocketNotification("FETCH_ERROR", errorMsg);
         return;
       }
 
       const contentType = response.headers.get("content-type");
       if (!contentType || !contentType.includes("application/json")) {
         const text = await response.text();
-        Log.error(`Expected JSON but received: ${contentType}`);
+        const errorMsg = `Expected JSON but received: ${contentType}`;
+        Log.error(errorMsg);
         Log.error(`Response preview: ${text.substring(0, 200)}`);
+        this.sendSocketNotification("FETCH_ERROR", errorMsg);
         return;
       }
 
@@ -82,6 +86,7 @@ module.exports = NodeHelper.create({
       this.sendSocketNotification("APO_DATA_RECEIVED", apotheken);
     } catch (error) {
       Log.error(error);
+      this.sendSocketNotification("FETCH_ERROR", error.message || "Unbekannter Fehler");
     }
   }
 });
