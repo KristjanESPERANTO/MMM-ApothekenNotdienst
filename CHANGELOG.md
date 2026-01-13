@@ -1,9 +1,36 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [1.1.0](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.0.8...v1.1.0) (2026-01-13)
+
+
+### Added
+
+* add comprehensive error handling and loading states ([d57f525](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/d57f525cd797148831b49cdc916138e23dddd202))
+
+
+### Fixed
+
+* prevent memory leak by clearing old interval ([ce8f98c](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/ce8f98c6cf16e87c744d29bd0e8888968ed3d328))
+* update API endpoint URL to fix JSON parsing error ([a0ff03e](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/a0ff03ec91cbb9b187d3c9fac04aa11a1abff839))
+
+
+### Chores
+
+* add demo  config and script ([f8e721b](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/f8e721bfca7113183b6515b866936df149a424ff))
+* add release script and commit-and-tag-version ([5ebfd26](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/5ebfd268e933d8e2162373d69f4c9ad1e42755de))
+* change runner from ubuntu-latest to ubuntu-slim for automated tests ([48024df](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/48024dffe1838c6e67f902c2d619829d91ab9308))
+* replace husky with simple-git-hooks ([b69e098](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/b69e098fdd08d3154f961efd7d8fac2b1613d67d))
+* update actions/checkout to v5 in automated tests workflow ([dbd8ed1](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/dbd8ed19439421e270476e3a0a67af344bdde70b))
+* update devDependencies ([8945b9e](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/8945b9e00a8554cfac938ca4c884e1675f5272af))
+* update GitHub Actions to use latest checkout and setup-node versions ([e2e5a1b](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/e2e5a1bcfec1ca3705a811b81ba901bd15c85717))
+
+
+### Code Refactoring
+
+* improve DOM manipulation efficiency ([f41f103](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/f41f10386c114660bd354f41e794d8a60c1012f4))
+* move apiToken to defaults ([78362a8](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/78362a8d68b82d68aa9a6e9888a2b07a0a5c6fb2))
 
 ## [1.0.8](https://github.com/KristjanESPERANTO/MMM-Forum/compare/v1.0.7...v1.0.8) - 2025-06-26
 
