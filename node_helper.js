@@ -32,7 +32,7 @@ module.exports = NodeHelper.create({
   },
 
   buildApiUrl (config, day) {
-    const url = new URL("https://www.aponet.de/notdienstsuche");
+    const url = new URL("https://www.aponet.de/apotheke/notdienstsuche");
     url.search = new URLSearchParams({
       "tx_aponetpharmacy_search[action]": "result",
       "tx_aponetpharmacy_search[controller]": "Search",
