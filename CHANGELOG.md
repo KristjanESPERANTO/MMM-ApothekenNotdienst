@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.1](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.1.0...v1.1.1) (2026-01-16)
+
+
+### Fixed
+
+* update API URL ([e5c1105](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/e5c1105ccd4fcba52ded1bb7fe80f1b09231dba9))
+
+
+### Chores
+
+* update cspell configuration with additional words and ignore CHANGELOG.md ([9b22549](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/9b22549a10f4dc96dccd50763c13118e4e1a212b))
+* update devDependencies ([cdf1d5c](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/cdf1d5c455b0934c8dddf426e6d42b4a313c4f0f))
+
 ## [1.1.0](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.0.8...v1.1.0) (2026-01-13)
 
 
