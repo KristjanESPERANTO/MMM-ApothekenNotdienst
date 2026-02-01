@@ -27,8 +27,8 @@ export default defineConfig([
         Module: "readonly"
       }
     },
-    plugins: {js, stylistic},
-    extends: [importX.recommended, "js/all", "stylistic/all"],
+    plugins: {js},
+    extends: [importX.recommended, "js/all", stylistic.configs.all],
     rules: {
       "@stylistic/array-element-newline": ["error", "consistent"],
       "@stylistic/dot-location": ["error", "property"],
