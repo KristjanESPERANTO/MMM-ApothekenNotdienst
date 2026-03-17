@@ -1,6 +1,6 @@
 {
   "name": "mmm-apothekennotdienst",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A MagicMirror² module to display pharmacies that are on emergency duty in Germany.",
   "keywords": [
     "MagicMirror",

@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.1.1...v1.2.0) (2026-03-17)
+
+
+### Added
+
+* add translations and improve UI messages ([c897679](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/c8976790ad1ca0e043f5a7257d6a6391c9589b1d))
+
+
+### Fixed
+
+* adapt to new aponet.de API ([7185ca0](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/7185ca088fc1ede49f28aec3a57ab9216b1432c5))
+
+
+### Documentation
+
+* add developer commands for demo and release management ([16cf9af](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/16cf9afc6f30aacf6ce4c28be710ab553522d712))
+
+
+### Chores
+
+* simplify prepare script ([f5a406c](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/f5a406c203b2646d627053bdf8d0c1ff29ab4c70))
+* update devDependencies ([4e2314c](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/4e2314c9dd4050ca532338113aab513f23630604))
+* update devDependencies ([4e136e2](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/4e136e2d1c77c51c1a536703524cb90d55d43ba5))
+* update ESLint stylistic plugin config ([7d2ee6d](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/7d2ee6dfc2315476075c6dbc1bbb2f3ca708de13))
+
 ## [1.1.1](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.1.0...v1.1.1) (2026-01-16)
 
 
