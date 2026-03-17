@@ -1,4 +1,4 @@
-let config = {
+const config = {
   address: "0.0.0.0",
   ipWhitelist: [],
   logLevel: ["INFO", "LOG", "WARN", "ERROR", "DEBUG"],
@@ -12,8 +12,7 @@ let config = {
       header: "Apotheken-Notdienste",
       position: "top_left",
       config: {
-        lat: 52.4974,
-        lon: 13.4596
+        plz: "10115" // Berlin Mitte
       }
     }
   ]

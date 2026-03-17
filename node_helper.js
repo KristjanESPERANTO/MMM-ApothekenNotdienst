@@ -32,16 +32,16 @@ module.exports = NodeHelper.create({
   },
 
   buildApiUrl (config, day) {
-    const url = new URL("https://www.aponet.de/apotheke/notdienstsuche");
+    const url = new URL("https://www.aponet.de/notdienstsuche");
     url.search = new URLSearchParams({
       "tx_aponetpharmacy_search[action]": "result",
       "tx_aponetpharmacy_search[controller]": "Search",
-      "tx_aponetpharmacy_search[search][plzort]": "",
+      "tx_aponetpharmacy_search[search][plzort]": config.plz,
       "tx_aponetpharmacy_search[search][date]": day,
       "tx_aponetpharmacy_search[search][street]": "",
       "tx_aponetpharmacy_search[search][radius]": config.radius,
-      "tx_aponetpharmacy_search[search][lat]": config.lat,
-      "tx_aponetpharmacy_search[search][lng]": config.lon,
+      "tx_aponetpharmacy_search[search][lat]": "",
+      "tx_aponetpharmacy_search[search][lng]": "",
       "tx_aponetpharmacy_search[token]": config.apiToken,
       type: "1981"
     }).toString();

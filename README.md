@@ -2,7 +2,7 @@
 
 **MMM-ApothekenNotdienst** is a module for the [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) project. Since the data is only relevant for Germany, it is only available in German.
 
-It shows the next pharmacies on duty in Germany. The data is provided by the website [www.aponet.de](https://www.aponet.de/apotheke/notdienstsuche/).
+It shows the next pharmacies on duty in Germany. The data is provided by the website [www.aponet.de](https://www.aponet.de/notdienstsuche/).
 
 Since there is no official API, the data is scraped from the website. That means that the module may stop working if the website changes anything.
 
@@ -37,8 +37,7 @@ To use this module, add it to the `config.js` file. Here is a minimal example:
       header: "Apotheken-Notdienste",
       position: "top_left",
       config: {
-        lat: 52.4974,
-        lon: 13.4596,
+        plz: "10115",
       }
     },
 ```
@@ -47,11 +46,10 @@ To use this module, add it to the `config.js` file. Here is a minimal example:
 
 | Option           | Description                                                                                             | Type    | Default                       |
 | ---------------- | ------------------------------------------------------------------------------------------------------- | ------- | ----------------------------- |
-| `lat`            | **Required**<br>Latitude of your location                                                               | Float   | `52.4974`                     |
-| `lon`            | **Required**<br>Longitude of your location                                                              | Float   | `13.4596`                     |
+| `plz`            | **Required**<br>Postal code or city name of your location (e.g. `"10115"` or `"Berlin"`)                | String  | `"10115"`                     |
 | `day`            | **Optional**<br>Show duties for today or tomorrow. <br> **Possible values:** `"today"` and `"tomorrow"` | String  | `"today"`                     |
 | `radius`         | **Optional**<br>Radius in km around your location                                                       | Integer | `5`                           |
-| `maxEntries`     | **Optional**<br>Maximum number of entries to show                                                       | Integer | `3`                           |
+| `maxEntries`     | **Optional**<br>Maximum number of entries to show                                                       | Integer | `5`                           |
 | `updateInterval` | **Optional**<br>Update interval in milliseconds                                                         | Integer | `30 * 60 * 1000` (30 minutes) |
 
 ## Update

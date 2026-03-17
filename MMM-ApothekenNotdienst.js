@@ -2,8 +2,7 @@ Module.register("MMM-ApothekenNotdienst", {
 
   defaults: {
     day: "today", // "today" or "tomorrow"
-    lat: 52.4974, // Berlin
-    lon: 13.4596,
+    plz: "10115", // postal code for search
     radius: 5, // in km
     maxEntries: 5,
     updateInterval: 30 * 60 * 1000, // update every 30 minutes
