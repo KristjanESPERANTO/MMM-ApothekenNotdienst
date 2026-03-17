@@ -1,0 +1,9 @@
+{
+  "LOADING": "Loading pharmacies on duty …",
+  "NO_ENTRIES": "No pharmacies on duty found nearby.",
+  "CONFIG_MISSING_PLZ": "Please set 'plz' (postal code) in the configuration.",
+  "UNKNOWN_ERROR": "Unknown error",
+  "DISTANCE": "Distance: %distance%",
+  "ON_DUTY": "On duty from %startdate% at %starttime% to %enddate% at %endtime%.",
+  "DATA_SOURCE": "Data source:"
+}

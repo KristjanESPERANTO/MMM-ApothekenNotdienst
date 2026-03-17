@@ -1,0 +1,9 @@
+{
+  "LOADING": "Apotheken-Notdienste werden geladen …",
+  "NO_ENTRIES": "Keine Apotheken-Notdienste in der Nähe gefunden.",
+  "CONFIG_MISSING_PLZ": "Bitte 'plz' (Postleitzahl) in der Konfiguration angeben.",
+  "UNKNOWN_ERROR": "Unbekannter Fehler",
+  "DISTANCE": "Entfernung: %distance%",
+  "ON_DUTY": "Notdienst vom %startdate% um %starttime% Uhr bis %enddate% um %endtime% Uhr.",
+  "DATA_SOURCE": "Datenquelle:"
+}
