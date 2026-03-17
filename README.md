@@ -79,8 +79,12 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 ### Developer commands
 
 - `npm install` - Install development dependencies.
+- `node --run demo` - Run MagicMirror² with a demo configuration for testing.
 - `node --run lint` - Run linting and formatter checks.
 - `node --run lint:fix` - Fix linting and formatter issues.
+- `node --run release` - Create a new release (automatic versioning).
+- `node --run release -- --release-as minor` - Create a new minor release.
+- `node --run release -- --release-as major` - Create a new major release.
 - `node --run test` - Run linting and formatter checks + run spelling check.
 - `node --run test:spelling` - Run spelling check.
 
