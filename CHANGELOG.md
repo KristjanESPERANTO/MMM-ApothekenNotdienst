@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.1](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.2.0...v1.2.1) (2026-04-01)
+
+
+### Fixed
+
+* update placeholder syntax in translation files ([248ae53](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/248ae5375cd9b4a485fc90fc202ad348ba4c0641))
+
+
+### Chores
+
+* add missing terms to cspell config ([e0093fe](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/e0093fe9e08d5bb58880f464244005082a1cb428))
+* remove demo.config.js rule from ESLint configuration ([61ccfc6](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/61ccfc6cd8a3f477cbb6264f99b8536148b075b9))
+* update devDependencies ([dea1e04](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/dea1e04bb1bfb81555da3149561ad4bec929d233))
+
 ## [1.2.0](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.1.1...v1.2.0) (2026-03-17)
 
 
