@@ -45,6 +45,5 @@ export default defineConfig([
       "sort-keys": "off"
     }
   },
-  {files: ["demo.config.js"], rules: {"prefer-const": "off"}},
   {files: ["**/*.md"], plugins: {markdown}, language: "markdown/gfm", extends: ["markdown/recommended"]}
 ]);
