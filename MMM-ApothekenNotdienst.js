@@ -5,8 +5,7 @@ Module.register("MMM-ApothekenNotdienst", {
     plz: "", // required: postal code or city name (e.g. "10115" or "Berlin")
     radius: 5, // in km
     maxEntries: 5,
-    updateInterval: 30 * 60 * 1000, // update every 30 minutes
-    apiToken: "216823d96ea25c051509d935955c130fbc72680fc1d3040fe3e8ca0e25f9cd02" // aponet.de API token
+    updateInterval: 30 * 60 * 1000 // update every 30 minutes
   },
 
   async start () {
