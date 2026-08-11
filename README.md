@@ -2,17 +2,15 @@
 
 **MMM-ApothekenNotdienst** is a module for the [MagicMirror²](https://github.com/MagicMirrorOrg/MagicMirror) project. Since the data is only relevant for Germany, it is only available in German.
 
-It shows the next pharmacies on duty in Germany. The data is provided by the website [www.aponet.de](https://www.aponet.de/notdienstsuche/).
+It displays pharmacies on duty in Germany using data from [aponet.de](https://www.aponet.de/notdienstsuche/).
 
-Since there is no official API, the data is scraped from the website. That means that the module may stop working if the website changes anything.
+Since there is no official API, the data is scraped from the website. The module may stop working if the website changes. There is no guarantee that the data is correct, so please always double-check the information before visiting a pharmacy. This is an independent module and is not affiliated with aponet.de. Please keep the source attribution visible and observe the [aponet.de terms of use](https://www.aponet.de/nutzungsbedingungen).
 
-There is also no guarantee that the data is correct. Please always double-check the information before you go to a pharmacy.
+## Why open data matters
 
-## Open Data
+Emergency pharmacy services are an essential part of the healthcare system. So why is this information still not available as open data?
 
-Emergency pharmacy services are an important part of the healthcare system. So why is this information not available as open data?
-
-This would ensure that people can quickly find life-saving medicines in emergencies, improves public health, supports innovation in healthcare applications and strengthens transparency and trust in the healthcare system.
+Open access would help people find life-saving medicines quickly in emergencies, improve public health, support useful applications and strengthen transparency and trust in the healthcare system. This module supports that goal, but does not claim that the current source data is released under an open-data license.
 
 ## Screenshot
 
