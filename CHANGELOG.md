@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.2](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.2.1...v1.2.2) (2026-08-11)
+
+### Fixed
+
+* switch Aponet search to session-based POST ([72ec51c](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/72ec51c24a9e9ca0759d970cf2120293260e7ebe))
+
+### Documentation
+
+* clarify data usage ([82f78ac](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/82f78acb22610a03bdaf0273832e456cbb066616))
+
+### Chores
+
+* add allowScripts configuration ([6ea8277](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/6ea8277442b18672f4e6327bf09b6f292f25422e))
+* update devDependencies ([065a4ac](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/065a4aca0f3076fe32e17cc84ba8d32b0a7b6ff9))
+* update GitHub Actions ([b550ba3](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/b550ba3df6196391f3ee83a70d712a63ccfa3452))
+
+### Tests
+
+* add unit tests ([80b3f39](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/commit/80b3f395085ec5f9ccc83bbe7e4a0e2b20357faf))
 ## [1.2.1](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/compare/v1.2.0...v1.2.1) (2026-04-01)
 
 
